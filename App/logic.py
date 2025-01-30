@@ -135,14 +135,14 @@ def load_books_tags(catalog, filename):
     :returns: Tamaño del conjunto de tags de los libros
     :rtype: int
     """
-    book_tags = catalog.get("Books_tags")
+    book_tags = catalog.get("book_tags")
     book_tags_file = os.path.join(data_dir, filename)
-    catalog ["Book_tags"] = set.load_set(book_tags, book_tags_file)
+    catalog ["book_tags"] = set.load_set(book_tags, book_tags_file)
     
     if book_tags is None: 
         return 0
     else: 
-        return set.size(catalog.get("Book_tags"))
+        return set.size(catalog.get("book_tags"))
     
     
    
